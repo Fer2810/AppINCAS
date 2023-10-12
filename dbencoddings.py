@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS tabla_descriptores (
 cursor.execute(create_table_query)
 
 # Nombre del usuario
-nombre_usuario = "Lobo"
+nombre_usuario = "Josue"
 
 # Comprobar si ya existe un descriptor para este usuario
 select_query = "SELECT descriptor_data FROM tabla_descriptores WHERE nombre_usuario = %s"
@@ -37,7 +37,7 @@ if existing_descriptor is not None:
     print(f"Ya existe un descriptor facial para el usuario {nombre_usuario}.")
 else:
     # Cargar la imagen
-    imagen = cv2.imread('img/IMG-20230827-WA0013.jpg')  # Reemplaza con la ubicación de tu imagen
+    imagen = cv2.imread('img/IMG-20230827-WA0006.jpg')  # Reemplaza con la ubicación de tu imagen
     cara = mtcnn.detect_faces(imagen)
 
     # Asegúrate de que se haya detectado al menos una cara

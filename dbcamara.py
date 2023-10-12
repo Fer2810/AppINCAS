@@ -74,7 +74,7 @@ while True:
 
         # Comparar los descriptores faciales con el obtenido en tiempo real
         for nombre_usuario, descriptor_tensor in zip(nombres_usuarios, descriptors_tensors):
-            # Calcula la distancia euclidiana entre los descriptores (aquí debes implementar tu lógica de comparación)
+            # Calcula la distancia euclidiana entre los descriptores
             distancia_euclidiana = torch.norm(descriptor_tensor - face_actual_tensor)
 
             # Establecer un umbral de similitud
@@ -83,8 +83,7 @@ while True:
             # Comparar la distancia con el umbral
             if distancia_euclidiana < umbral_similitud:
                 print(f"El rostro capturado coincide con el de {nombre_usuario} en la base de datos.")
-                # Puedes agregar aquí acciones adicionales si se reconoce un rostro
-                # Por ejemplo, mostrar el nombre en la imagen
+                # Mostrar el nombre en la imagen
                 cv2.putText(frame, nombre_usuario, (x2, y2 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 255, 0), 2)
             else:
                 print("El rostro capturado no coincide con ninguno en la base de datos.")
