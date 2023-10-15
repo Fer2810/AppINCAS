@@ -18,7 +18,7 @@ conn = pymysql.connect(host='localhost', user='root', password='', database='app
 cursor = conn.cursor()
 
 # Ruta para el formulario
-@app.route('/')
+@app.route('/index')
 def index():
     return render_template('form.html')
 
