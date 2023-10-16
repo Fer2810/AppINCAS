@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subir Imagen y Nombre de Usuario</title>
+</head>
+<body>
+    <h1>Subir Imagen y Nombre de Usuario</h1>
+    <form action="/procesar" method="POST" enctype="multipart/form-data">
+        <label for="nombre_usuario">Nombre de Usuario:</label>
+        <input type="text" name="nombre_usuario" id="nombre_usuario" required><br><br>
+        <label for="imagen">Imagen:</label>
+        <input type="file" name="imagen" id="imagen" required><br><br>
+        <input type="submit" value="Procesar">
+    </form>
+</body>
+</html>

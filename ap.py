@@ -20,7 +20,7 @@ cursor = conn.cursor()
 # Ruta para el formulario
 @app.route('/index')
 def index():
-    return render_template('form.html')
+    return render_template('my-app/templates/public/appform/form.html')
 
 # Ruta para procesar el formulario
 @app.route('/procesar', methods=['POST'])
