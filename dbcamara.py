@@ -71,7 +71,7 @@ with mp_face_mesh.FaceMesh(
                 distancia_euclidiana = torch.norm(descriptor_tensor - face_actual_tensor)
 
                 # Establecer un umbral de similitud
-                umbral_similitud = 1  # Puedes ajustar este valor según tus necesidades
+                umbral_similitud = 0.9  # Puedes ajustar este valor según tus necesidades
 
                 # Comparar la distancia con el umbral
                 if distancia_euclidiana < umbral_similitud:
